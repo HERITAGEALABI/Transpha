@@ -82,9 +82,7 @@ letter-spacing: 0.02em;;
         padding: 10px 0px;
     }
     .section-one .vector{
-        width: 350px;
-        max-width: 100%
-        ;
+     display: none;
     }
     .section-one h4{
         font-family: Montserrat;
@@ -109,12 +107,14 @@ letter-spacing: 0.02em;;
     .section-one .button .icon{
         width: 55px;
         max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 } 
 
 @media only screen and (max-width: 770px){
     .section-one{
-        padding: 80px;
+        padding: 120px;
         color:black;
     }
     .section-one .content1{
@@ -125,9 +125,7 @@ letter-spacing: 0.02em;;
         padding: 10px 0px;
     }
     .section-one .vector{
-        width: 350px;
-        max-width: 100%
-        ;
+   display: none;
     }
     .section-one h4{
         font-family: Montserrat;
