@@ -1,3 +1,12 @@
+.flex {
+    display: flex;
+}
+.col {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
 .col {
     flex-direction: column;
 }
@@ -19,7 +28,7 @@
     ;
 }
 .section-one span{
-    color:  #9CBFF0;;
+    color:  #9CBFF0;
 }
 .section-one .content1{
     display: flex;
@@ -67,7 +76,23 @@ letter-spacing: 0.02em;;
     display: inline;
     padding: 15px;
 }
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 35px;
+    padding: 30px;
+}
+footer .content{
+    display: inline;
+    margin-right: 30px;
+}
+footer .content1{
+    display: inline;
+}
+.blue{
+   color:  #278FFF;
 
+}
 /*Mobile screen*/
 @media only screen and (max-width: 400px){
     .section-one{
@@ -110,10 +135,30 @@ letter-spacing: 0.02em;;
         margin-right: auto;
         margin-left: auto;
     }
+    footer {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 35px;
+        padding: 30px;
+        flex-wrap: wrap;
+    }
+    footer .content{
+        display: inline;
+        margin-right: 30px;
+    }
+    footer .content1{
+        display: inline;
+    }
+    .blue{
+       color: #278FFF;
+       
+    }
 } 
 
 @media only screen and (max-width: 770px){
     .section-one{
+        margin-top: auto;
+        margin-bottom: auto;
         padding: 120px;
         color:black;
     }
@@ -153,6 +198,25 @@ letter-spacing: 0.02em;;
 
         max-width: 100%;
 }
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 35px;
+    padding: 30px;
+}
+footer .content{
+    display: inline;
+    margin-right: 30px;
+}
+footer .content1{
+    display: inline;
+}
+.blue{
+    color: #278FFF;
+}
+}
+
 
 @media only screen and (max-width: 1150px){
     
@@ -214,5 +278,21 @@ letter-spacing: 0.02em;;
     display: inline;
     padding: 15px;
 }
+footer {
+    display: flex;
 
+    justify-content: space-around;
+    margin: 0 35px;
+    padding: 30px;
+}
+footer .content{
+    display: inline;
+    margin-right: 30px;
+}
+footer .content1{
+    display: inline;
+}
+.blue{
+    color: #278FFF;
+}
 }
