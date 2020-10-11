@@ -29,7 +29,7 @@
                    <a href="https://drive.google.com/file/d/1FrAwsskp0W--HiU3ZIRn6aG3-d0yGd6x/view?usp=drivesdk"> <img src="static/img/Apple.png" alt="" class="icon" /></a>
                     </span>
                     <span class="one">
-                        <img src="img/Group.png" class="image" alt="windows" />
+                        <img src="../static/img/Group.png" class="image" alt="windows" />
                         <button class="click" >Download for WIndows</button>
 </span>
 <span class="3">
@@ -50,6 +50,29 @@
                    <p>Have questions? Send us a mail 
                    <span class="blue">transphaapp@gmail.com</span>
 </p>
-
+<script>
+    function downloadBlobData(blobData, filename) {
+        let blobUrl = URL.createObjectURL(blobData) // create a url from blob
+        const a = document.createElement('a') // create a virtual link
+        a.href = blobUrl // set the href of link to the blob url
+        a.download = filename || 'download' // set filename to filename if defined otherwise download
+        const clickHandler = () => {
+            setTimeout(() => { // delay running for 200ms
+                URL.revokeObjectURL(blobUrl) // revoke the blob url
+                this.removeEventListener('click', clickHandler) // 
+            }, 200)
+        }
+        a.addEventListener('click', clickHandler)
+        a.click() // click the link to download
+        return a
+    }
+    const btn = document.querySelector('.one .click')
+    btn.addEventListener('click', ()=> {
+        fetch('/download', { // make a POST request to the server
+            method: 'POST'
+        }).then(res => res.blob()) // get the blob data from response
+        .then(res => downloadBlobData(res, 'transpha.exe')) // send the blob to the function above
+    })
+</script>
 </body>
 </html>
