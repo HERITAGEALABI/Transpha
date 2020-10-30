@@ -1,4 +1,4 @@
-from flask import Flask, send_file, render_template, jsonify, make_response
+from flask import Flask, send_from_directory, render_template, jsonify, make_response
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def download(filename):
     uploads = os.path.join(current_app.root_path, app.config['UPLOAD_FOLDER'])
     # Returning file from appended path
     return send_from_directory(directory=uploads, filename=transpha.exe)
-
+  
 # @app.route("/download", methods=["POST"])
 # def download_file():
 #     try:
