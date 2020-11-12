@@ -16,7 +16,7 @@ def home():
 
 @app.route("/download", methods=["POST", "GET"])
 def download(filename):
-    uploads = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'])
+    uploads = os.path.join(app.root_path, app.config['UPLOADS'])
     # Returning file from appended path
     update()
     return send_from_directory(directory=uploads, filename=transpha.exe)
