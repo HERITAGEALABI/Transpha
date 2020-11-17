@@ -21,14 +21,14 @@
                <div class="content1">
                    <div class="min-content">
                    <h4>Fast? That’s an understatement</h4>
-                   <p> With <span> Transpha</span>, you get the speeds you need to send very large files with relative ease and absolute comfort.
+                   <p> With <span> Transpha</span>, you get the speed you need to send very large files with relative ease and absolute comfort.
                 </p>
                 <br/>
                 <div class="button">
                   
                     <span class="one">
                         <img src="../static/img/Group.png" class="image" alt="windows" />
-                        <button class="click">Download for Windows</button>
+                 <a href="{% url_for('folder', folder_name=folder) %}">{{ folder }} <button onclick="" class="click">Download for Windows</button></a>      
                     </span>
 
                     <p>Download for Mac and Linux coming soon...</p>
@@ -49,6 +49,7 @@
                    <span class="blue"><a href="mailto:transphaapp@gmail.com">Send us a mail</a></span>
 </p>
 <script>
+  
     function downloadBlobData(blobData, filename) {
         let blobUrl = URL.createObjectURL(blobData) // create a url from blob
         const a = document.createElement('a') // create a virtual link
